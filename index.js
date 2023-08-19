@@ -7,6 +7,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const moviesRoute = require("./routes/movies");
 const listsRoute = require("./routes/lists");
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 
@@ -26,6 +27,6 @@ app.use("/api/movies", moviesRoute);
 app.use("/api/lists", listsRoute);
 
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
 	console.log("listening on port 5000");
 });
